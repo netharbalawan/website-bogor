@@ -3,69 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kota Bogor</title>
+<title>Bogor Tourism</title>
+
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+
 </head>
 
 <body>
+
+<!-- LOADING -->
+<div id="loader">Loading...</div>
 
 <!-- NAVBAR -->
 <header class="navbar">
     <h2>Bogor</h2>
     <nav>
         <a href="#">Home</a>
-        <a href="wisata.html">Wisata</a>
-        <a href="#">About</a>
+        <a href="#wisata">Wisata</a>
+        <a href="#map">Map</a>
     </nav>
+    <button onclick="toggleDark()">🌙</button>
 </header>
 
-<!-- HERO -->
+<!-- HERO SLIDER -->
 <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
+    <div class="slides">
+        <img src="https://source.unsplash.com/1600x900/?bogor" class="active">
+        <img src="https://source.unsplash.com/1600x900/?mountain">
+        <img src="https://source.unsplash.com/1600x900/?waterfall">
+    </div>
+    <div class="hero-text">
         <h1>Explore Bogor</h1>
-        <p>Kota Hujan dengan sejuta keindahan</p>
-        <button>Jelajahi Sekarang</button>
+        <p>Kota Hujan yang Indah</p>
     </div>
 </section>
 
-<!-- DESTINASI -->
-<section class="section">
-    <h2>Destinasi Populer</h2>
+<!-- SEARCH -->
+<section class="search-box">
+    <input type="text" id="search" placeholder="Cari wisata...">
+</section>
 
-    <div class="cards">
+<!-- WISATA -->
+<section id="wisata" class="section">
+    <h2 data-aos="fade-up">Destinasi Populer</h2>
 
-        <div class="card">
-            <img src="https://source.unsplash.com/400x300/?bogor,garden">
-            <div class="card-text">
-                <h3>Kebun Raya</h3>
-                <p>Wisata alam ikonik Bogor</p>
-            </div>
+    <div class="cards" id="cards">
+
+        <div class="card" data-name="kebun raya">
+            <img src="https://source.unsplash.com/400x300/?garden">
+            <h3>Kebun Raya</h3>
         </div>
 
-        <div class="card">
+        <div class="card" data-name="curug">
             <img src="https://source.unsplash.com/400x300/?waterfall">
-            <div class="card-text">
-                <h3>Curug</h3>
-                <p>Air terjun alami yang sejuk</p>
-            </div>
+            <h3>Curug</h3>
         </div>
 
-        <div class="card">
+        <div class="card" data-name="puncak">
             <img src="https://source.unsplash.com/400x300/?mountain">
-            <div class="card-text">
-                <h3>Puncak</h3>
-                <p>Pemandangan pegunungan indah</p>
-            </div>
+            <h3>Puncak</h3>
         </div>
 
     </div>
 </section>
 
-<!-- FOOTER -->
+<!-- MAP -->
+<section id="map" class="section">
+    <h2>Lokasi Bogor</h2>
+    <iframe 
+        src="https://maps.google.com/maps?q=Bogor&t=&z=13&ie=UTF8&iwloc=&output=embed">
+    </iframe>
+</section>
+
 <footer>
     <p>© 2026 Bogor Tourism</p>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
