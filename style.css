@@ -195,3 +195,6 @@ footer {
         padding: 80px 15px;
     }
 }
+.navbar nav a:hover {
+    color: #00c3ff;
+}
