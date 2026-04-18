@@ -1,11 +1,6 @@
 body {
     margin:0;
     font-family:sans-serif;
-}
-
-body {
-    margin:0;
-    font-family:sans-serif;
     background: linear-gradient(to right, #74ebd5, #ACB6E5);
 }
 
@@ -19,6 +14,7 @@ body {
     display:flex;
     justify-content:space-between;
     padding:15px 40px;
+    z-index:1000;
 }
 
 /* HERO */
@@ -54,6 +50,7 @@ body {
 .section {
     padding:100px 50px;
     text-align:center;
+    animation: fadeUp 1s ease;
 }
 
 /* CARD */
@@ -61,12 +58,14 @@ body {
     display:flex;
     justify-content:center;
     gap:20px;
+    flex-wrap:wrap;
 }
 
 .card {
     width:250px;
     border-radius:15px;
     overflow:hidden;
+    background:white;
     box-shadow:0 5px 15px rgba(0,0,0,0.3);
     transition: all 0.4s ease;
 }
@@ -76,20 +75,12 @@ body {
     box-shadow:0 15px 30px rgba(0,0,0,0.4);
 }
 
-.card {
-    width:250px;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
-    transition:0.3s;
-}
-
-.card:hover {
-    transform:translateY(-10px);
-}
-
 .card img {
     width:100%;
+}
+
+.card h3 {
+    margin:10px;
 }
 
 /* FOOTER */
@@ -100,12 +91,7 @@ footer {
     color:white;
 }
 
-.section {
-    padding:100px 50px;
-    text-align:center;
-    animation: fadeUp 1s ease;
-}
-
+/* ANIMASI */
 @keyframes fadeUp {
     from {
         opacity:0;
