@@ -99,3 +99,20 @@ footer {
     background:#2c3e50;
     color:white;
 }
+
+.section {
+    padding:100px 50px;
+    text-align:center;
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity:0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
