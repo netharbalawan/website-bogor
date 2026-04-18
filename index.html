@@ -10,53 +10,62 @@
 <body>
 
 <!-- NAVBAR -->
-<nav id="navbar">
+<header class="navbar">
     <h2>Bogor</h2>
-    <div class="menu">
+    <nav>
         <a href="#">Home</a>
         <a href="wisata.html">Wisata</a>
         <a href="#">About</a>
-    </div>
-</nav>
+    </nav>
+</header>
 
-<!-- HERO SLIDER -->
+<!-- HERO -->
 <section class="hero">
-    <div class="slide active" style="background-image:url('https://source.unsplash.com/1600x900/?bogor');"></div>
-    <div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?mountain');"></div>
-    <div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?waterfall');"></div>
-
-    <div class="hero-text">
-        <h1>Kota Bogor</h1>
-        <p>Kota Hujan yang Indah</p>
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Explore Bogor</h1>
+        <p>Kota Hujan dengan sejuta keindahan</p>
+        <button>Jelajahi Sekarang</button>
     </div>
 </section>
 
-<!-- WISATA PREVIEW -->
-<section class="wisata fade">
+<!-- DESTINASI -->
+<section class="section">
     <h2>Destinasi Populer</h2>
 
-    <div class="card-container">
+    <div class="cards">
+
         <div class="card">
-            <img src="https://source.unsplash.com/300x200/?garden">
-            <h3>Kebun Raya</h3>
+            <img src="https://source.unsplash.com/400x300/?bogor,garden">
+            <div class="card-text">
+                <h3>Kebun Raya</h3>
+                <p>Wisata alam ikonik Bogor</p>
+            </div>
         </div>
 
         <div class="card">
-            <img src="https://source.unsplash.com/300x200/?waterfall">
-            <h3>Curug</h3>
+            <img src="https://source.unsplash.com/400x300/?waterfall">
+            <div class="card-text">
+                <h3>Curug</h3>
+                <p>Air terjun alami yang sejuk</p>
+            </div>
         </div>
 
         <div class="card">
-            <img src="https://source.unsplash.com/300x200/?mountain">
-            <h3>Puncak</h3>
+            <img src="https://source.unsplash.com/400x300/?mountain">
+            <div class="card-text">
+                <h3>Puncak</h3>
+                <p>Pemandangan pegunungan indah</p>
+            </div>
         </div>
+
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 Bogor Tourism</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
