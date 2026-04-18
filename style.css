@@ -1,20 +1,146 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* SCROLL HALUS */
 html {
     scroll-behavior: smooth;
 }
 
-/* BUTTON EXPLORE */
-.btn-explore {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #00c3ff;
+/* BODY */
+body {
+    font-family: sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
     color: white;
-    border-radius: 20px;
+    z-index: 1000;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    color: white;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.btn-explore:hover {
-    background: #009ed1;
+.navbar a:hover {
+    color: #00c3ff;
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 1s;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+/* SECTION */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* GRID DESTINASI */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* GAMBAR */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* ISI CARD */
+.card-body {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-body h3 {
+    margin-bottom: 8px;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
 }
