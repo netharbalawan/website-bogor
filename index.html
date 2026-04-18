@@ -1,65 +1,62 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kota Bogor</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kota Bogor</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- NAVBAR -->
-<nav>
+<nav id="navbar">
     <h2>Bogor</h2>
     <div class="menu">
         <a href="#">Home</a>
-        <a href="#">Wisata</a>
+        <a href="wisata.html">Wisata</a>
         <a href="#">About</a>
     </div>
 </nav>
 
-<!-- HERO / BANNER -->
+<!-- HERO SLIDER -->
 <section class="hero">
-    <h1>Kota Bogor</h1>
-    <p>Kota Hujan dengan sejuta keindahan alam</p>
-</section>
+    <div class="slide active" style="background-image:url('https://source.unsplash.com/1600x900/?bogor');"></div>
+    <div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?mountain');"></div>
+    <div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?waterfall');"></div>
 
-<!-- WISATA -->
-<section class="wisata">
-    <h2>Destinasi Populer</h2>
-
-    <div class="card-container">
-
-        <div class="card">
-            <img src="https://source.unsplash.com/300x200/?bogor" alt="">
-            <h3>Kebun Raya Bogor</h3>
-            <p>Tempat wisata alam yang terkenal di Indonesia.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://source.unsplash.com/300x200/?waterfall" alt="">
-            <h3>Curug</h3>
-            <p>Air terjun yang indah dan sejuk.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://source.unsplash.com/300x200/?mountain" alt="">
-            <h3>Puncak</h3>
-            <p>Tempat favorit dengan pemandangan pegunungan.</p>
-        </div>
-
+    <div class="hero-text">
+        <h1>Kota Bogor</h1>
+        <p>Kota Hujan yang Indah</p>
     </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about">
-    <h2>Tentang Bogor</h2>
-    <p>Kota Bogor dikenal sebagai kota hujan dengan wisata alam yang indah dan udara yang sejuk.</p>
+<!-- WISATA PREVIEW -->
+<section class="wisata fade">
+    <h2>Destinasi Populer</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?garden">
+            <h3>Kebun Raya</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?waterfall">
+            <h3>Curug</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?mountain">
+            <h3>Puncak</h3>
+        </div>
+    </div>
 </section>
 
 <footer>
-    <p>© 2026 Website Bogor</p>
+    <p>© 2026 Bogor Tourism</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
