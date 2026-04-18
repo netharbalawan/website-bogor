@@ -21,3 +21,38 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+// LOADING
+window.onload = () => {
+    document.getElementById("loader").style.display = "none";
+}
+
+// SLIDER
+let slides = document.querySelectorAll(".slides img");
+let i = 0;
+
+setInterval(() => {
+    slides[i].classList.remove("active");
+    i = (i + 1) % slides.length;
+    slides[i].classList.add("active");
+}, 3000);
+
+// DARK MODE
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
+
+// SEARCH
+let search = document.getElementById("search");
+let cards = document.querySelectorAll(".card");
+
+search.addEventListener("keyup", () => {
+    let value = search.value.toLowerCase();
+
+    cards.forEach(card => {
+        let name = card.dataset.name;
+        card.style.display = name.includes(value) ? "block" : "none";
+    });
+});
+
+// AOS INIT
+AOS.init();
