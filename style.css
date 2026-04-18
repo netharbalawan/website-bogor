@@ -102,3 +102,58 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* CONTAINER */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* GRID RESPONSIVE */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* GAMBAR */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* ISI CARD */
+.card-body {
+    padding: 15px;
+}
+
+.card-body h3 {
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* RESPONSIVE EXTRA */
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 15px;
+    }
+}
